@@ -1,0 +1,3 @@
+#! /bin/bash
+echo "$0 $*" >> /tmp/perf.log
+perf "$@" 2> >(tee -a /tmp/perf.log >&2)
